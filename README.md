@@ -18,7 +18,7 @@ You just need to download and unpack the binary wherever you uprefer and run it.
 On the first execution windows firewall might ask a permission to open the connection:
 ![image](https://user-images.githubusercontent.com/53466066/199925068-c7b1235a-cd6c-4847-a822-a42f49fa6514.png)
 
-Note: enable local addreses.
+Note: enable the local addreses and press "Allow access".
 
 Take a note on the port number and the IP adress(es), this precious information will be required right away.
 
