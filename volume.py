@@ -5,6 +5,8 @@
 
 # some details https://learn.microsoft.com/en-us/windows/win32/api/endpointvolume/nf-endpointvolume-iaudioendpointvolume-setmastervolumelevelscalar
 
+__version = '0.1 beta'
+
 import sys
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
@@ -21,19 +23,51 @@ import time
 
 conf_port = 8000
 
+global_device = None
 global_volume = None
 global_keyboard = None
 
-def init_globals():
+global_device_state = None
 
+def init_device():
+    global global_device
     global global_volume
-    global global_keyboard
+    global global_device_state
 
-    devices = AudioUtilities.GetSpeakers()
-    interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+    global_device = AudioUtilities.GetSpeakers()
+    global_device_state = global_device.GetId()
     
+    interface = global_device.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
     global_volume = cast(interface, POINTER(IAudioEndpointVolume))            
+
+
+def init_globals():
+    global global_keyboard
+    
+    init_device()
     global_keyboard = Controller()
+
+    
+def detectDeviceChange():
+    '''
+        returns True if audio device state change detected
+        does not change any variables
+    '''
+    global global_device
+    global global_device_state
+    
+    device = AudioUtilities.GetSpeakers()
+    state = device.GetId()
+    
+    if global_device_state is None:
+        global_device_state = state
+        return False
+    
+    if global_device_state == state:
+        return False
+    
+    return True
+    
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
@@ -80,22 +114,27 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         key = mapping.get(keyCode)
         
         sys.stdout.write(f'\rKey: {keyCode}    ')
+        sys.stdout.flush()
         
         if key is None:
             key = chr(keyCode)
             
-        self.keyboard = Controller()
+        #self.keyboard = Controller()
             
-        self.keyboard.press(key)
-        self.keyboard.release(key)
+        global_keyboard.press(key)
+        global_keyboard.release(key)
     
     def doVolume(self, vol):
 
         sys.stdout.write(f'\rVolume: {vol} ')
         sys.stdout.flush()
+        
+        if detectDeviceChange():
+            print('\nDevice change detected')
+            init_device()
 
         try:
-            global_volume.SetMasterVolumeLevelScalar(vol/100.0, None)            
+            global_volume.SetMasterVolumeLevelScalar(vol/100.0, None)
         except OSError as e:
             print(f'\n{e}')
         
@@ -142,7 +181,8 @@ s.connect(("8.8.8.8", 80))
 ip2 = s.getsockname()[0]
 s.close()
 
-print(f'server listening on port {conf_port}, ip:')
+print(f'Version {__version}')
+print(f'Listening on port {conf_port}, ip:')
 if ip1 != ip2:
     print('primary ip:', ip2)
 print('ip:', ip1)
@@ -151,13 +191,9 @@ print('ip:', ip1)
 
 while True:
 
-    print('\nListen...')
-
-    #redirect stderr
-    #nul = os.open(os.devnull, os.O_RDWR)
-    #os.dup2(nul, 2)
-    
     init_globals()
+
+    print('\nListening...')
         
     try:
         httpd = HTTPServer(('192.168.5.6', conf_port), SimpleHTTPRequestHandler)
