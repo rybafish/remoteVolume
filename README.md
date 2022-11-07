@@ -1,5 +1,7 @@
 # remoteVolume
-Control PC volume with your phone (iPhone, Andriod)
+Control PC volume with your phone (iPhone, Andriod).
+
+The functionality is really straight-forward:
 
 ![](/img/00_main_app.png)
 
@@ -24,16 +26,22 @@ Take a note on the port number and the IP adress(es), this precious information 
 
 # Mobile side
 
-The setup more or less the same for the iPhone and Android users. You need to start the browser and open the ipadress and the port, in my case 192.168.5.6:8000, should look like this:
+The setup more or less the same for iPhone and Android users. You need to start the browser and open the ip-adress and the port, in this case 192.168.5.6:8000, should look like this:
 
-(screen to follow)
+![safari](/img/01_web.png)
 
-Now you can create a home screen icon. Click "share", scroll down a bit and choose "Add to Home Screen".
+If everything works fine you will be able so see the app running already:
 
-(screen to follow)
+![safari](/img/02_web.png)
+
+Now you can create a home screen icon. Press "Share", scroll down a bit and choose "Add to Home Screen".
+
+![add home](/img/03_add_home.png)
 
 Type any preferred name:
 
-(screen to follow)
+![add home](/img/04_add_home.png)
+
+![thatsit](/img/05_home.png)
 
 That's it, you should see the volume icon on you home screen.
