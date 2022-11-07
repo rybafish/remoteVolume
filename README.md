@@ -5,11 +5,13 @@ The functionality is really straight-forward:
 
 ![](/img/00_main_app.png)
 
-No app required on the phone, only run a server part on your PC.
+In addition to master volume level you can send Next, Play/Pause, Previous, Left, Space, Right buttons to control your playback on the PC.
 
-On the phone you just need to create a bookmark and use your mobile to adjust the PC master volume.
+No app required on the phone, only the server needs to be running on your PC.
 
-PC and mobile need to be connected to the same WiFi network.
+On the phone you will need to create a bookmark and you will be able to use it almost as a regular app.
+
+Of course, the PC and mobile need to be connected to the same WiFi network.
 
 Step by step instruction below.
 
