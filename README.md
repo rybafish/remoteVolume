@@ -1,7 +1,7 @@
 # remoteVolume
 Control PC volume with your phone (iPhone, Andriod)
 
-(screen example)
+![](/img/00_main_app.png)
 
 No app required on the phone, only run a server part on your PC.
 
