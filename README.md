@@ -11,10 +11,10 @@ On the phone you just need to create a bookmark and use your mobile to adjust th
 
 PC and mobile need to be connected to the same WiFi network.
 
-Step by step instruction will follow soon.
+Step by step instruction below.
 
 # PC side
-You just need to download and unpack the binary wherever you uprefer and run it. This should look something like this:
+You need to download and unpack the binary wherever you uprefer and run it. This should look something like this:
 (screen to follow)
 
 On the first execution windows firewall might ask a permission to open the connection:
