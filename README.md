@@ -47,3 +47,6 @@ Type any preferred name:
 ![thatsit](/img/05_home.png)
 
 That's it, you should see the volume icon on you home screen.
+
+# Download
+[01 beta](https://github.com/rybafish/remoteVolume/releases/download/v0.1beta/RemoteVolume_01beta.7z) for Windows 10 (PC), 2022-11-07.
