@@ -1,4 +1,4 @@
-# remoteVolume
+# Remote Volume
 Control PC volume with your phone (iPhone, Andriod).
 
 The functionality is really straight-forward:
