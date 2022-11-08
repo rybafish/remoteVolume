@@ -1,14 +1,15 @@
 Control PC volume with your phone (iPhone, Andriod).
 
-The functionality is really straight-forward:
-
+On the mobile the interface is very clean and simple:
 ![main](/img/00_main_app.png)
 
-In addition to master volume level you can send Next, Play/Pause, Previous, Left, Space, Right buttons to control your playback on the PC.
+In addition to master volume level you can send
+- Next, Play/Pause, Previous media events
+- Left, Space, Right key-presses
 
-No app required on the phone, only the server needs to be running on your PC.
+This allows to get simple control over the media playback on the PC.
 
-On the phone you will need to create a bookmark and you will be able to use it almost as a regular app.
+Actually, no app required on the phone it is just a web-interface to the server side installed on the PC. On the mobile you only need to create a bookmark and you will be able to use it almost as a regular app.
 
 Of course, the PC and mobile need to be connected to the same WiFi network.
 
@@ -16,7 +17,7 @@ Step by step instruction below.
 
 # PC side
 You need to download and unpack the binary wherever you uprefer and run it. This should look something like this:
-(screen to follow)
+![image](https://user-images.githubusercontent.com/53466066/200641996-e2fa973d-4121-4172-a9d3-52d0f03aa4f2.png)
 
 On the first execution windows firewall might ask a permission to open the connection:
 ![image](https://user-images.githubusercontent.com/53466066/199925068-c7b1235a-cd6c-4847-a822-a42f49fa6514.png)
