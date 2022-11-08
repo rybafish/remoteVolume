@@ -5,12 +5,12 @@ On the mobile the interface is very clean and simple:
 ![main](/img/00_main_app.png)
 
 In addition to master volume level you can send
-- Next, Play/Pause, Previous media events
-- Left, Space, Right key-presses
+- ```[Previous], [Play/Pause], [Next]``` - media events
+- ```[Left arrow], [Space], [Right arrow] - key-presses
 
 This allows to get simple control over the media playback on the PC.
 
-Actually, no app required on the phone it is just a web-interface to the server side installed on the PC. On the mobile you only need to create a bookmark and you will be able to use it almost as a regular app.
+Actually, no app required on the phone, see details below. 
 
 Of course, the PC and mobile need to be connected to the same WiFi network.
 
