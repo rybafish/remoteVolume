@@ -6,7 +6,7 @@ On the mobile the interface is very clean and simple:
 
 In addition to master volume level you can send
 - ```[Previous], [Play/Pause], [Next]``` - media events
-- ```[Left arrow], [Space], [Right arrow] - key-presses
+- ```[Left arrow], [Space], [Right arrow]``` - key-presses
 
 This allows to get simple control over the media playback on the PC.
 
