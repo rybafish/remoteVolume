@@ -17,7 +17,7 @@ Of course, the PC and mobile need to be connected to the same WiFi network.
 Step by step instruction below.
 
 # PC side
-You need to download and unpack the binary wherever you uprefer and run it. This should look something like this:
+You need to [download](#download) and unpack the binary wherever you uprefer and run it. This should look something like this:
 ![image](https://user-images.githubusercontent.com/53466066/200641996-e2fa973d-4121-4172-a9d3-52d0f03aa4f2.png)
 
 On the first execution windows firewall might ask a permission to open the connection:
@@ -25,7 +25,7 @@ On the first execution windows firewall might ask a permission to open the conne
 
 Note: enable the local addreses and press "Allow access".
 
-Take a note on the port number and the IP adress(es), this precious information will be required right away.
+Take a note on the port number and the IP address(es), this precious information will be required right away.
 
 # Mobile side
 
@@ -48,6 +48,8 @@ Type any preferred name:
 ![thatsit](/img/05_home.png)
 
 That's it, you should see the volume icon on you home screen.
+
+<a name="download" />
 
 # Download
 [01 beta](https://github.com/rybafish/remoteVolume/releases/download/v0.1beta/RemoteVolume_01beta.7z) for Windows 10 (PC), 2022-11-07.
