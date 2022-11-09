@@ -20,10 +20,10 @@ Step by step instruction below.
 
 # PC side
 You need to [download](#download) and unpack the binary wherever you prefer and run it. This should look something like this:
-![image](https://user-images.githubusercontent.com/53466066/200641996-e2fa973d-4121-4172-a9d3-52d0f03aa4f2.png)
+![image](https://user-images.githubusercontent.com/53466066/200941396-b16cbe84-a0ae-4ac2-b02f-6c1e2efa0367.png)
 
 On the first execution windows firewall might ask a permission to open the connection:
-![image](https://user-images.githubusercontent.com/53466066/199925068-c7b1235a-cd6c-4847-a822-a42f49fa6514.png)
+![image](https://user-images.githubusercontent.com/53466066/200941938-abd99cef-f3d2-4fc8-b170-1a0167bcd1a2.png)
 
 Note: enable the local addreses and press "Allow access".
 
@@ -72,7 +72,7 @@ Open the "Allow an app through firewall":
 
 In the list of applications find the "volume" and check the settings.
 
-![image](https://user-images.githubusercontent.com/53466066/200746334-7e3f7b76-a2a5-4b5f-bf33-7508869b87b8.png)
+![image](https://user-images.githubusercontent.com/53466066/200942237-429866b4-df9d-4446-9290-0f45ecbb030b.png)
 
 It should be allowed to communicate through private and public networks.
 
