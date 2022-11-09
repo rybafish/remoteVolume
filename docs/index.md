@@ -1,10 +1,10 @@
 Control the PC volume with your mobile phone (iPhone, Andriod).
 
-On the mobile the interface is clean and simple:
+On the mobile the interface looks like this:
 
 ![main](/img/00_main_app.png)
 
-In addition to master volume level you can send
+In addition to master volume level you can send the following events:
 - ```[Previous], [Play/Pause], [Next]``` - media events
 - ```[Left arrow], [Space], [Right arrow]``` - key-presses
 
