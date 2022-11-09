@@ -1,6 +1,6 @@
-Control PC volume with your phone (iPhone, Andriod).
+Control the PC volume with your mobile phone (iPhone, Andriod).
 
-On the mobile the interface is very clean and simple:
+On the mobile the interface is clean and simple:
 
 ![main](/img/00_main_app.png)
 
@@ -8,16 +8,16 @@ In addition to master volume level you can send
 - ```[Previous], [Play/Pause], [Next]``` - media events
 - ```[Left arrow], [Space], [Right arrow]``` - key-presses
 
-This allows to get simple control over the media playback on the PC.
+This allows to get basic control over the media playback on the PC.
 
-Actually, no app required on the phone, see details below. 
+Actually no application required on the phone, only on the PC, see details below. 
 
-Of course, the PC and mobile need to be connected to the same WiFi network.
+The only requirement is PC and mobile need to be connected to the same WiFi network.
 
 Step by step instruction below.
 
 # PC side
-You need to [download](#download) and unpack the binary wherever you uprefer and run it. This should look something like this:
+You need to [download](#download) and unpack the binary wherever you prefer and run it. This should look something like this:
 ![image](https://user-images.githubusercontent.com/53466066/200641996-e2fa973d-4121-4172-a9d3-52d0f03aa4f2.png)
 
 On the first execution windows firewall might ask a permission to open the connection:
@@ -53,3 +53,23 @@ That's it, you should see the volume icon on you home screen.
 
 # Download
 [01 beta](https://github.com/rybafish/remoteVolume/releases/download/v0.1beta/RemoteVolume_01beta.7z) for Windows 10 (PC), 2022-11-07.
+
+# Troubleshooting
+Usual problem is windows firewall. In this case server console does not show any interraction, list "Listening..." message. On the mobile side you will see a blank screen.
+
+To make sure you have allowed the connections to the volume application:
+- hit the start button
+- start typing "firewall"
+- select "Firewall & network protection"
+
+![image](https://user-images.githubusercontent.com/53466066/200745924-7feacb4c-a0d3-4112-862d-8d76b108bf6c.png)
+
+Open the "Allow an app through firewall":
+
+![image](https://user-images.githubusercontent.com/53466066/200746060-542d9d9d-675c-46e4-b955-790609ca6ad1.png)
+
+In the list of applications find the "volume" and check the settings.
+
+![image](https://user-images.githubusercontent.com/53466066/200746334-7e3f7b76-a2a5-4b5f-bf33-7508869b87b8.png)
+
+It should be allowed to communicate through private and public networks.
