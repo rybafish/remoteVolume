@@ -1,3 +1,5 @@
 remote_theme: pages-themes/architect@v0.2.0
 title: Remote Volume
-description: Remote Volume homepage
+description: Adjust the PC volume from your mobile
+
+show_downloads: True
