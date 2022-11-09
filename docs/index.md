@@ -27,7 +27,10 @@ On the first execution windows firewall might ask a permission to open the conne
 
 Note: enable the local addreses and press "Allow access".
 
-Take a note on the port number and the IP address(es), this precious information will be required right away.
+Take a note on the port number and the IP address(es), this precious information will be required right away:
+![image](https://user-images.githubusercontent.com/53466066/200945058-22ad8fe4-73f9-41d6-8f5e-aa8323f5973c.png)
+
+In this case, 192.168.5.6:8000
 
 # Mobile side
 
