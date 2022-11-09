@@ -52,10 +52,10 @@ That's it, you should see the volume icon on you home screen.
 <a name="download" />
 
 # Download
-[01 beta](https://github.com/rybafish/remoteVolume/releases/download/v0.1beta/RemoteVolume_01beta.7z) for Windows 10 (PC), 2022-11-07.
+Version [0.1 beta](https://github.com/rybafish/remoteVolume/releases/download/v0.1beta/RemoteVolume_01beta.7z) for Windows 10, 2022-11-07.
 
 # Troubleshooting
-Usual problem is windows firewall. In this case server console does not show any interraction, list "Listening..." message. On the mobile side you will see a blank screen.
+The moist common problem is windows firewall. In this case server the console does not show any interraction, just the "Listening..." message. On the mobile side you will see a blank screen.
 
 To make sure you have allowed the connections to the volume application:
 - hit the start button
