@@ -1,4 +1,6 @@
-Control the PC volume with your mobile phone (iPhone, Andriod).
+# Overview
+
+Remote Volume is a small application to control the PC volume with your mobile phone (iPhone, Andriod).
 
 On the mobile the interface looks like this:
 
@@ -73,3 +75,7 @@ In the list of applications find the "volume" and check the settings.
 ![image](https://user-images.githubusercontent.com/53466066/200746334-7e3f7b76-a2a5-4b5f-bf33-7508869b87b8.png)
 
 It should be allowed to communicate through private and public networks.
+
+# Report issues
+
+To report issues or request features create a ticket on the projects [github page](https://github.com/rybafish/remoteVolume/issues).
