@@ -140,6 +140,10 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         
     def getCurrentVolume(self):
 
+        if detectDeviceChange():
+            print('\nDevice change detected')
+            init_device()
+
         v = int(global_volume.GetMasterVolumeLevelScalar()*100)
         
         return v
