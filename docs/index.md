@@ -1,29 +1,31 @@
-Control PC volume with your phone (iPhone, Andriod).
+Control the PC volume with your mobile phone (iPhone, Andriod).
 
-The functionality is really straight-forward:
+On the mobile the interface looks like this:
 
 ![main](/img/00_main_app.png)
 
-In addition to master volume level you can send Next, Play/Pause, Previous, Left, Space, Right buttons to control your playback on the PC.
+In addition to master volume level you can send the following events:
+- ```[Previous], [Play/Pause], [Next]``` - media events
+- ```[Left arrow], [Space], [Right arrow]``` - key-presses
 
-No app required on the phone, only the server needs to be running on your PC.
+This allows to get basic control over the media playback on the PC.
 
-On the phone you will need to create a bookmark and you will be able to use it almost as a regular app.
+Actually no application required on the phone, only on the PC, see details below. 
 
-Of course, the PC and mobile need to be connected to the same WiFi network.
+The only requirement is PC and mobile need to be connected to the same WiFi network.
 
 Step by step instruction below.
 
 # PC side
-You need to download and unpack the binary wherever you uprefer and run it. This should look something like this:
-(screen to follow)
+You need to [download](#download) and unpack the binary wherever you prefer and run it. This should look something like this:
+![image](https://user-images.githubusercontent.com/53466066/200641996-e2fa973d-4121-4172-a9d3-52d0f03aa4f2.png)
 
 On the first execution windows firewall might ask a permission to open the connection:
 ![image](https://user-images.githubusercontent.com/53466066/199925068-c7b1235a-cd6c-4847-a822-a42f49fa6514.png)
 
 Note: enable the local addreses and press "Allow access".
 
-Take a note on the port number and the IP adress(es), this precious information will be required right away.
+Take a note on the port number and the IP address(es), this precious information will be required right away.
 
 # Mobile side
 
@@ -47,5 +49,27 @@ Type any preferred name:
 
 That's it, you should see the volume icon on you home screen.
 
+<a name="download" />
+
 # Download
-[01 beta](https://github.com/rybafish/remoteVolume/releases/download/v0.1beta/RemoteVolume_01beta.7z) for Windows 10 (PC), 2022-11-07.
+Version [0.1 beta](https://github.com/rybafish/remoteVolume/releases/download/v0.1beta/RemoteVolume_01beta.7z) for Windows 10, 2022-11-07.
+
+# Troubleshooting
+The moist common problem is windows firewall. In this case server the console does not show any interraction, just the "Listening..." message. On the mobile side you will see a blank screen.
+
+To make sure you have allowed the connections to the volume application:
+- hit the start button
+- start typing "firewall"
+- select "Firewall & network protection"
+
+![image](https://user-images.githubusercontent.com/53466066/200745924-7feacb4c-a0d3-4112-862d-8d76b108bf6c.png)
+
+Open the "Allow an app through firewall":
+
+![image](https://user-images.githubusercontent.com/53466066/200746060-542d9d9d-675c-46e4-b955-790609ca6ad1.png)
+
+In the list of applications find the "volume" and check the settings.
+
+![image](https://user-images.githubusercontent.com/53466066/200746334-7e3f7b76-a2a5-4b5f-bf33-7508869b87b8.png)
+
+It should be allowed to communicate through private and public networks.
