@@ -3,3 +3,7 @@ title: Remote Volume
 description: Adjust the PC volume from your mobile
 
 show_downloads: True
+
+github:
+  zip_url: http://example.com/download.zip
+  another_url: another value
