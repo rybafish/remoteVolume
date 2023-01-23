@@ -27,7 +27,10 @@ On the first execution windows firewall might ask a permission to open the conne
 
 Note: enable the local addreses and press "Allow access".
 
-Take a note on the port number and the IP address(es), this precious information will be required right away.
+Take a note on the port number and the IP address(es), this precious information will be required right away:
+![image](https://user-images.githubusercontent.com/53466066/200945058-22ad8fe4-73f9-41d6-8f5e-aa8323f5973c.png)
+
+In this case, 192.168.5.6:8000
 
 # Mobile side
 
@@ -54,7 +57,7 @@ That's it, you should see the volume icon on you home screen.
 <a name="download" />
 
 # Download
-Version [0.1 beta](https://github.com/rybafish/remoteVolume/releases/download/v0.1beta/RemoteVolume_01beta.7z) for Windows 10, 2022-11-07.
+Version [0.1 beta](https://github.com/rybafish/remoteVolume/releases/download/v0.1beta/remoteVolume_01beta.7z) for Windows 10, 2022-11-07.
 
 # Troubleshooting
 The moist common problem is windows firewall. In this case server the console does not show any interraction, just the "Listening..." message. On the mobile side you will see a blank screen.
