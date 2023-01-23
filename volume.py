@@ -82,13 +82,13 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         
         s = self.path
-                
+
         if s[:12] == '/volume?set=':
             vol = int(s[12:])
             self.doVolume(vol)
         elif s == '/':
             self.doIndex()
-        elif s == '/icon.png':
+        elif s == '/icon.png' or s == '/favicon.ico':
             self.doIcon()
         elif s == '/splash.png':
             self.doSplash()
@@ -200,7 +200,7 @@ while True:
     print('\nListening...')
         
     try:
-        httpd = HTTPServer(('192.168.5.6', conf_port), SimpleHTTPRequestHandler)
+        httpd = HTTPServer(('0.0.0.0', conf_port), SimpleHTTPRequestHandler)
         httpd.serve_forever()
 
         print('\nserve_forever exited for some reason')
