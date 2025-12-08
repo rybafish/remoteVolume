@@ -45,4 +45,4 @@ class Mixer:
         return vol
     
     def setVolume(self, vol):
-        self.pulse.volume_set_all_chans(self.sink, vol)
+        self.pulse.volume_set_all_chans(self.sink, vol/100)
