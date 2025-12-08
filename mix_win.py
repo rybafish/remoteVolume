@@ -43,6 +43,11 @@ class Mixer:
         return True
     
 
+    def getVolume(self):
+        v = int(self.volume.GetMasterVolumeLevelScalar()*100)
+
+        return v
+        
     def setVolume(self, vol):
         try:
             self.volume.SetMasterVolumeLevelScalar(vol/100.0, None)

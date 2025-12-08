@@ -101,12 +101,13 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         
     def getCurrentVolume(self):
 
-        if detectDeviceChange():
+        if mixer.deviceChanged():
             print('\nDevice change detected')
             init_device()
 
-        v = int(global_volume.GetMasterVolumeLevelScalar()*100)
+        # v = int(global_volume.GetMasterVolumeLevelScalar()*100)
         
+        v = mixer.getVolume()
         return v
     
     def doIndex(self):
