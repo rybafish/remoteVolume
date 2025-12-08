@@ -28,9 +28,10 @@ def init_globals():
     global global_keyboard
     
     mixer.init()
-    global_keyboard = Controller()
-
     
+
+    if os.name == 'nt':
+        global_keyboard = Controller()
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
