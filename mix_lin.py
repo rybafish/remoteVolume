@@ -13,7 +13,7 @@ class Mixer:
     def init(self):
         try:
             self.pulse = Pulse('get-volume')
-            self.sink = self.pulse.get_sink_by_name(pulse.server_info().default_sink_name)
+            self.sink = self.pulse.get_sink_by_name(self.pulse.server_info().default_sink_name)
         except PulseError as e:
             print('cannot init pulse')
 
