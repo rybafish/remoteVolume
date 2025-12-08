@@ -12,5 +12,8 @@ class Mixer:
     def deviceChanged(self):
         pass
 
+    def getVolume(self, v):
+        pass
+    
     def setVolume(self, v):
         pass
