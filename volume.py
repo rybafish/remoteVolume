@@ -96,7 +96,8 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         
         if mixer.deviceChanged():
             print('\nDevice change detected')
-            init_device()
+            mixer.init()
+            #init_device()
 
         mixer.setVolume(vol)
         
