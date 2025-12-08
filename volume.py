@@ -10,9 +10,6 @@ __version = '0.1 beta'
 import sys
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
-from pycaw.pycaw import AudioUtilities, ISimpleAudioVolume, IAudioEndpointVolume
-from ctypes import POINTER, cast
-from comtypes import CLSCTX_ALL
 from math import log
 
 from pynput.keyboard import Key, Controller
@@ -22,51 +19,15 @@ import socket
 import time
 
 conf_port = 8000
-
-global_device = None
-global_volume = None
 global_keyboard = None
-
-global_device_state = None
-
-def init_device():
-    global global_device
-    global global_volume
-    global global_device_state
-
-    global_device = AudioUtilities.GetSpeakers()
-    global_device_state = global_device.GetId()
-    
-    interface = global_device.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
-    global_volume = cast(interface, POINTER(IAudioEndpointVolume))            
-
+mixer = None
 
 def init_globals():
     global global_keyboard
     
-    init_device()
+    mixer.init()
     global_keyboard = Controller()
 
-    
-def detectDeviceChange():
-    '''
-        returns True if audio device state change detected
-        does not change any variables
-    '''
-    global global_device
-    global global_device_state
-    
-    device = AudioUtilities.GetSpeakers()
-    state = device.GetId()
-    
-    if global_device_state is None:
-        global_device_state = state
-        return False
-    
-    if global_device_state == state:
-        return False
-    
-    return True
     
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
@@ -129,14 +90,11 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         sys.stdout.write(f'\rVolume: {vol} ')
         sys.stdout.flush()
         
-        if detectDeviceChange():
+        if mixer.deviceChanged():
             print('\nDevice change detected')
             init_device()
 
-        try:
-            global_volume.SetMasterVolumeLevelScalar(vol/100.0, None)
-        except OSError as e:
-            print(f'\n{e}')
+        mixer.setVolume(vol)
         
     def getCurrentVolume(self):
 
@@ -184,6 +142,14 @@ s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.connect(("8.8.8.8", 80))
 ip2 = s.getsockname()[0]
 s.close()
+
+
+if os.name == 'nt':
+    import mix_win
+    mixer = mix_win.Mixer()
+else:
+    import mix_lin
+    mixer = mix_lin.Mixer()
 
 print(f'Version {__version}')
 print(f'Listening on port {conf_port}, ip:')
