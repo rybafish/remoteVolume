@@ -17,7 +17,6 @@ class Mixer:
         except PulseError as e:
             print('cannot init pulse')
 
-        self.device_id = self.sink.index
         print(f'device id: {self.device_id}')
         print(f'device: {self.sink.description}')
 
