@@ -12,9 +12,11 @@ import sys
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from math import log
 
-from pynput.keyboard import Key, Controller
-
 import os
+
+if os.name == 'nt':
+    from pynput.keyboard import Key, Controller
+
 import socket
 import time
 
@@ -142,7 +144,6 @@ s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.connect(("8.8.8.8", 80))
 ip2 = s.getsockname()[0]
 s.close()
-
 
 if os.name == 'nt':
     import mix_win
