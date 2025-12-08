@@ -1,7 +1,8 @@
 #
-# Simple server side script to adjust system msater volume via http
+# Simple server side script to adjust system master volume via http
 #
 # 2022-11-02 EVN
+# 2025-12-07 dixie
 
 # some details https://learn.microsoft.com/en-us/windows/win32/api/endpointvolume/nf-endpointvolume-iaudioendpointvolume-setmastervolumelevelscalar
 
