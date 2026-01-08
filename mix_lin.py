@@ -46,6 +46,7 @@ class Mixer:
             
     def getVolume(self):
         vol = sum(self.sink.volume.values) / len(self.sink.volume.values)
+        vol = round(vol*100)
         return vol
     
     def setVolume(self, vol):
