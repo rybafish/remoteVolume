@@ -23,20 +23,25 @@ class Mixer:
     def deviceChanged(self):
 
         if self.sink is None:
+            print('1 device init')
             self.init()
 
         if self.sink is None:
+            print('2 device null?')
             return
         
         id = self.pulse.server_info().default_sink_name
 
         if self.device_id is None:
             self.device_id = id
+            print('3 device id change')
             return False
 
         if self.device_id == id:
+            print('3 device id no change')
             return False
 
+        print('deviceChanged = True')
         return True
             
     def getVolume(self):
