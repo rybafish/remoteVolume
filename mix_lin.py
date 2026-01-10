@@ -39,7 +39,7 @@ class Mixer:
             return False
 
         if self.device_id == id:
-            print('3 device id no change')
+            # print('3 device id no change')
             return False
 
         print('deviceChanged = True')
