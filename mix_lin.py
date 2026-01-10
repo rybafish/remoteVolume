@@ -1,4 +1,5 @@
 from pulsectl import Pulse, PulseError
+from pulsectl.pulsectl import PulseOperationFailed
 
 class Mixer:
 
@@ -50,4 +51,8 @@ class Mixer:
         return vol
     
     def setVolume(self, vol):
-        self.pulse.volume_set_all_chans(self.sink, vol/100)
+        try:
+            self.pulse.volume_set_all_chans(self.sink, vol/100)
+        except PulseOperationFailed as ex:
+            print(f'setVolume exception: {ex}')
+
