@@ -54,5 +54,8 @@ class Mixer:
         try:
             self.pulse.volume_set_all_chans(self.sink, vol/100)
         except PulseOperationFailed as ex:
-            print(f'setVolume exception: {ex}')
+            print(f'setVolume exception, destroy sink')
+            self.sink = None
+            self.device_id = None
+            self.init()
 
